@@ -179,3 +179,10 @@ def now():
 
 now()
 print(now.__name__)
+
+# =============== partial function ==================
+print(int('12345'))
+print(int('12345',base=8))
+print(int('12345',base=16))
+int2 = functools.partial(int,base=2)
+print(int2('1000000'))
