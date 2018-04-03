@@ -107,3 +107,9 @@ def count2():
 f1, f2, f3 = count2()
 print(f1(),f2(),f3())
 
+# ========================== lambda ==========================
+def f(x):
+    return x*x
+f = lambda x: x*x
+print(f)
+print(f(5))
