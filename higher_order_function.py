@@ -54,3 +54,8 @@ def not_empty(s):
 print(list(filter(not_empty,['a','b','','d',None,' '])))
 
 # ==================== sorted =================
+print(sorted([1,6,3,5,9,2,1,-4]))
+print(sorted([1,6,3,5,9,2,1,-4],key=abs))
+print(sorted(['bob', 'about', 'Zoo', 'Credit']))
+print(sorted(['bob', 'about', 'Zoo', 'Credit'],key=str.lower))
+print(sorted(['bob', 'about', 'Zoo', 'Credit'],key=str.lower,reverse=True))
