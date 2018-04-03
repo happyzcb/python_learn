@@ -112,3 +112,31 @@ try:
     s.score = 9999
 except Exception as e:
     print(e)
+
+# =============== MixIn ==================
+class Animal(object):
+    pass
+
+class Mamml(Animal):
+    pass
+
+class Bird(Animal):
+    pass
+
+class RunnableMixIn(object):
+    def run(self):
+        print('Running...')
+
+class FlyableMixIn(object):
+    def fly(self):
+        print('Flying...')
+
+class CarnivorousMixIn(object):
+    pass
+
+class HerbivoresMixIn(object):
+    pass
+
+class Dog(Mamml,RunnableMixIn,CarnivorousMixIn):
+    pass
+
