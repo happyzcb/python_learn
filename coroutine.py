@@ -19,3 +19,31 @@ def produce(c):
 
 c = consumer()
 produce(c)
+
+
+#======================== asyncio ========================
+import asyncio
+@asyncio.coroutine
+def hello():
+    print('Hello World!')
+    r = yield from asyncio.sleep(1)
+    print("Hello again!")
+#
+# loop = asyncio.get_event_loop()
+# loop.run_until_complete(hello())
+# loop.close()
+
+#======================== 2 coroutine======================
+import threading
+
+@asyncio.coroutine
+def hello2():
+    print("Hello world! (%s)" % threading.currentThread)
+    yield from asyncio.sleep(1)
+    print("Hello again! (%s)" % threading.currentThread)
+
+# loop2 = asyncio.get_event_loop()
+# tasks = [hello2(),hello2()]
+# loop2.run_until_complete(asyncio.wait(tasks))
+# loop2.close()
+
